@@ -1,0 +1,43 @@
+﻿<Window x:Class="MazeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MazeApp"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button  Click="Button_Click"
+                     Width="100"
+                     Margin="10">Small</Button>
+            <Button Name="btnMedium"
+                    Width="100"
+                    Click="btnMedium_Click"
+                    Margin="10">Medium</Button>
+            <Button  Name="btnLarge"
+                     Width="100"
+                     Click="btnLarge_Click"
+                     Margin="10">Large</Button>
+
+            <Button  Name="btnXtraLarge"
+                     Width="100"
+                     Click="btnXtraLarge_Click"
+                     Margin="10">Extra Large</Button>
+        </StackPanel>
+        <Grid Name="MazeGrid"
+              Margin="20"
+              Height="550"
+              Width="550"
+              Grid.Row="1"
+              Loaded="MazeGrid_Loaded">
+        </Grid>
+
+    </Grid>
+</Window>

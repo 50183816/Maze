@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Maze maze = new Maze(MazeSize.Small);
+            maze.GenerateMaze();
+            Console.ReadLine();
+        }
+    }
+}
